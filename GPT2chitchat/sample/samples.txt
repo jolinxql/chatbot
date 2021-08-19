@@ -1,0 +1,13 @@
+聊天记录2021-08-19 02:39:54.570113:
+user:test
+chatbot:昨天晚上看你摇摆来着
+user:今天天气怎么样
+chatbot:天气好
+user:我是什么人
+chatbot:多好
+user:你除了好还会什么
+chatbot:会寂寞
+user:。。。
+chatbot:这句是不是好久没人教我了。我说很少让你如此不想被我
+user:太冷漠了
+chatbot:你在我心里。就不会感到伤害
