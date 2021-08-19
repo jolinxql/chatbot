@@ -20,7 +20,7 @@ def load_json(f):
     return obj
 
 
-token = load_json("conf/token.json")["token"]
+token = load_json("conf/token_private.json")["token"]
 bot_conf = load_json("conf/bot.json")
 bot = Bot(bot_conf)
 

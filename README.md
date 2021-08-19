@@ -23,3 +23,5 @@ nohup ../miniconda3/envs/chatbot/bin/python -u main.py 80 > nohup.out 2>&1 &
 kill $(ps aux | grep "main.py 80" | grep -v grep | awk '{ print $2 }')
 
 ```
+vi .git/config修改为
+url = ssh://git@github.com/jolinxql/chatbot.git
