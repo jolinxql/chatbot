@@ -1,5 +1,6 @@
 {
   "print_req": false,
   "print_req_content": true,
-  "print_resp_content": true
+  "print_resp_content": true,
+  "logfile": "test"
 }

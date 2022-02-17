@@ -2,6 +2,7 @@
 Ubuntu 20.04 LTS
 ``` bash
 sudo apt update
+sudo apt install python3-webpy
 sudo apt install python3-pip
 sudo apt install libxml2-dev libxslt1-dev
 curl --output conda_.sh https://repo.anaconda.com/miniconda/Miniconda3-
@@ -11,7 +12,7 @@ bash conda_.sh
 # logout & login
 conda create -n chatbot python=3.8
 conda activate
-pip install transformers==4.2.0 web.py tensorboard flask
+pip install transformers==4.2.0 web.py tensorboard
 conda install pytorch==1.7.0 torchvision==0.8.0 torchaudio==0.7.0 cpuonly -c pytorch
 ```
 vi .git/config修改为
@@ -46,16 +47,7 @@ redis-cli -a chatbot
 127.0.0.1:6379> ping
 PONG
 
-## flask的bot
-### 启动flask的bot
-sudo su
-bash flask_start.sh
-### 停止flask的bot
-sudo su
-bash flask_stop.sh
-
-## webpy的bot（已经废弃）
-### 启动webpy的bot
+### 启动bot
 sudo bash chatbot/start.sh
-### 停止webpy的bot
+### 停止bot
 sudo bash chatbot/stop.sh

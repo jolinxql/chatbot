@@ -10,18 +10,12 @@ import json
 import web
 
 import process
-import receive
+from protos import receive
 from chatbot import Bot
+from utils import helper
 
-
-def load_json(f):
-    with open(f) as fin:
-        obj = json.load(fin)
-    return obj
-
-
-token = load_json("conf/token_private.json")["token"]
-bot_conf = load_json("conf/bot.json")
+token = helper.load_json("conf/token_private.json")["token"]
+bot_conf = helper.load_json("conf/bot.json")
 bot = Bot(bot_conf)
 
 
@@ -34,7 +28,7 @@ class Handle(object):
     def GET(self):
         try:
             data = web.input()
-            hyper_conf = load_json("conf/hyper.json")  # 满足动态调试
+            hyper_conf = helper.load_json("conf/hyper.json")  # 满足动态调试
             if hyper_conf['print_req']:
                 print(data)
             if len(data) == 0:
@@ -61,7 +55,7 @@ class Handle(object):
     def POST(self):
         try:
             webData = web.data()
-            hyper_conf = load_json("conf/hyper.json")  # 满足动态调试
+            hyper_conf = helper.load_json("conf/hyper.json")  # 满足动态调试
 
             if hyper_conf['print_req']:
                 print("Handle Post webdata is ", webData)

@@ -5,12 +5,12 @@
     
 """
 import web
-from handle import Handle
 
 urls = (
     '/wx', 'Handle',
 )
 
 if __name__ == '__main__':
+    from webback.handle import Handle
     app = web.application(urls, globals())
     app.run()
